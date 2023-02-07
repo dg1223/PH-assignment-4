@@ -49,6 +49,17 @@ function evenOdd(string) {
 
 // Third problem: isLGSeven
 function isLGSeven(number) {
+    /**
+    * The isLGSeven function returns the result of subtracting 7 from a number,
+    * or multiplying the number by 2 if it is greater than seven.
+    * 
+    *
+    * @param number Pass in the number that is being tested
+    *
+    * @return The difference between the number and 7 if it is less than 7;
+    *         otherwise double the number
+    *
+    */
 
     if ((typeof number) !== 'number') {
         return "TypeError: Your input should only be a number."
