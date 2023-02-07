@@ -88,8 +88,8 @@ function findingBadData(array) {
     }
 
     // check if any array item is not a number
-    const num_type = (item) => typeof item !== 'number'
-    if (array.some(num_type)){
+    const isNotNum = (item) => typeof item !== 'number'
+    if (array.some(isNotNum)){
         return "TypeError: Your array should contain numbers only."
     }
 
@@ -105,9 +105,27 @@ function findingBadData(array) {
 }
 
 // Fifth problem: gemsToDiamond
-function gemsToDiamond(params) {
-    return NULL
+function gemsToDiamond(num1, num2, num3) {
+
+    if (arguments.length !== 3) {            
+        return 'ParamError: You should pass exactly 3 arguments to the function.'
+    } else if (typeof num1 !== 'number' || 
+               typeof num2 !== 'number' || 
+               typeof num3 !== 'number') {
+                
+                return 'TypeError: You should only pass numbers as arguments.'
+    } else {
+        /* pass */
+    }
+
+    const gem1 = 21
+    const gem2 = 32
+    const gem3 = 43
+
+    const diamond = num1*gem1 + num2*gem2 + num3*gem3
+
+    return ( (diamond <= 1000*2) ? diamond : diamond-2000 )
 }
 
-a = findingBadData([-4, -9, -5, -33, -55])
+a = gemsToDiamond([-4, -9, -5, -33, -55])
 console.log(a)
