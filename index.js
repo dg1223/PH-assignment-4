@@ -4,8 +4,8 @@ const { NULL } = require("node-sass")
 // First problem: mindGame
 function mindGame(number) {
     /**
-     * The mindGame function takes a number as an argument and returns the result of
-     * ((number*3 + 10)/2)-5.
+     * The mindGame function takes a number as an argument and returns the 
+     * result of ((number*3 + 10)/2)-5.
      * 
      *
      * @param number Pass a positive number to the function
@@ -26,17 +26,40 @@ function mindGame(number) {
 }
 
 // Second problem: evenOdd
-function evenOdd(params) {
-    return 
-}
+function evenOdd(string) {
+    /**
+     * The evenOdd function takes a string as input and returns 'even' 
+     * if the length of the string is even, or 'odd' if it's odd.
+     * 
+     *
+     * @param string Determine if the number of characters in the string 
+     *               is even or odd
+     * 
+     * @return A string
+     *
+     */
 
-a = mindGame(33)
-console.log(a)
+    if ((typeof string) !== 'string') {
+        return "TypeError: Your input should only be a string."
+    }
+
+    let str_length = string.length
+    return (((str_length % 2) === 0) ? 'even' : 'odd')
+}
 
 // Third problem: isLGSeven
-function isLGSeven(params) {
-    return NULL
+function isLGSeven(number) {
+
+    if ((typeof number) !== 'number') {
+        return "TypeError: Your input should only be a number."
+    }
+
+    let difference = number - 7
+    return ((difference < 7) ? difference : number*2)
 }
+
+a = isLGSeven(0)
+console.log(a)
 
 // Fourth problem: findingBadData
 function findingBadData(params) {
