@@ -1,6 +1,3 @@
-const { NULL } = require("node-sass")
-
-
 // First problem: mindGame
 function mindGame(number) {
     /**
@@ -43,7 +40,7 @@ function evenOdd(string) {
         return "TypeError: Your input should only be a string."
     }
 
-    let str_length = string.length
+    const str_length = string.length
     return (((str_length % 2) === 0) ? 'even' : 'odd')
 }
 
@@ -65,7 +62,7 @@ function isLGSeven(number) {
         return "TypeError: Your input should only be a number."
     }
 
-    let difference = number - 7
+    const difference = number - 7
     return ((difference < 7) ? difference : number*2)
 }
 
@@ -106,6 +103,19 @@ function findingBadData(array) {
 
 // Fifth problem: gemsToDiamond
 function gemsToDiamond(num1, num2, num3) {
+    /**
+     * The gemsToDiamond function takes three numbers as arguments and 
+     * returns the total value of all gems.
+     * 
+     *
+     * @param num1 power of gems (a number) for 1st player
+     * @param num2 power of gems (a number) for 2nd player
+     * @param num3 power of gems (a number) for 3rd player
+     *   
+     *
+     * @return : total number of diamonds (a number)
+     *
+     */
 
     if (arguments.length !== 3) {            
         return 'ParamError: You should pass exactly 3 arguments to the function.'
@@ -126,6 +136,3 @@ function gemsToDiamond(num1, num2, num3) {
 
     return ( (diamond <= 1000*2) ? diamond : diamond-2000 )
 }
-
-a = gemsToDiamond([-4, -9, -5, -33, -55])
-console.log(a)
